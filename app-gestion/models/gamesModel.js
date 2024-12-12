@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var productSchema = new mongoose.Schema({
+var gameShema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -9,10 +9,14 @@ var productSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
   description: {
     type: String,
     required: true,
   },
 });
 
-module.exports = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Game", gameShema);
