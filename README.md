@@ -4,10 +4,10 @@ Petit projet web, avec docker. Projet final de la matière Docker
 
 Réalisé par :
 
-- Clément Asbert (TD46)
-- Antoine Aujey (TD44)
-- Oussama (TD 44)
-- Ayoub (TD 44)
+- Clément ASBERT (TD46)
+- Antoine AUJAY (TD44)
+- Oussama AMMAR EL IDRISSI(TD 44)
+- Ayoub ABOUDA(TD 44)
 
 Pour lancer le backend (app-gestion) avec le Dockerfile :
 
