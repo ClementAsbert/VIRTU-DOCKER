@@ -2,10 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const filmsRoutes = require("./routes/film");
 const gamesRoutes = require("./routes/game");
+const cors = require("cors")
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 
 app.use("/api/films", filmsRoutes);
 app.use("/api/games", gamesRoutes);
