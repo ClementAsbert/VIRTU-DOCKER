@@ -12,8 +12,10 @@
             <div class="form-group">
               <label for="name">Nom</label>
               <input id="name" v-model="formData.name" required />
+  
               <label for="type">Type</label>
               <input id="type" v-model="formData.type" required />
+  
               <label for="description">Description</label>
               <textarea id="description" v-model="formData.description" required></textarea>
             </div>
@@ -29,6 +31,8 @@
   </template>
   
   <script>
+  import axios from "axios";
+  
   export default {
     name: "AddMovieComponent",
     data() {
@@ -48,15 +52,24 @@
       closeModal() {
         this.isModalVisible = false; // Ferme la modal
       },
-      handleSubmit() {
-        console.log("Données soumises :", this.formData);
-        // Réinitialiser le formulaire
-        this.formData = {
-          name: "",
-          type: "",
-          description: "",
-        };
-        this.closeModal(); // Ferme la modal après soumission
+      async handleSubmit() {
+        try {
+          // Appel à l'API backend
+          const response = await axios.post("http://localhost:3000/api/films", this.formData);
+          console.log("Film ajouté :", response.data);
+  
+          // Réinitialiser le formulaire après succès
+          this.formData = {
+            name: "",
+            type: "",
+            description: "",
+          };
+  
+          // Fermer la modal
+          this.closeModal();
+        } catch (error) {
+          console.error("Erreur lors de l'ajout du film :", error);
+        }
       },
     },
   };
@@ -120,18 +133,24 @@
   }
   
   input,
-textarea {
-  width: 90%; /* Réduction de la largeur des champs pour s'adapter à la modal */
-  padding: 8px 12px; /* Réduction du padding */
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333333;
-  background-color: #f9f9f9;
-  transition: all 0.2s ease-in-out;
-}
-
-
+  textarea {
+    width: 90%; /* Réduction de la largeur des champs pour s'adapter à la modal */
+    padding: 8px 12px; /* Réduction du padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
   
   .form-actions {
     display: flex;
