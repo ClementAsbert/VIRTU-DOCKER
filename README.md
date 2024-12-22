@@ -1,7 +1,5 @@
 # VIRTU-DOCKER
 
-Petit projet web, avec docker. Projet final de la matière Docker
-
 Réalisé par :
 
 - Clément ASBERT (TD46)
@@ -9,7 +7,11 @@ Réalisé par :
 - Oussama AMMAR EL IDRISSI(TD 44)
 - Ayoub ABOUDA(TD 44)
 
-Pour lancer le backend (app-gestion) avec le Dockerfile :
+PREREQUIS :
+Assurez vous de bien avoir DOCKER et DOCKER compose installer sur votre machine
 
-- docker build -t <nom_image> .
-- docker run -p 3000:3000 <nom_image>
+LANCER LE PROJET :
+
+LISTE DES ENPOINTS :
+
+INTERFACE UTILISATEUR:
