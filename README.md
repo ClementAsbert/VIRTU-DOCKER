@@ -7,17 +7,6 @@ Réalisé par :
 - Oussama AMMAR EL IDRISSI(TD 44)
 - Ayoub ABOUDA(TD 44)
 
-<<<<<<< HEAD
-PREREQUIS :
-Assurez vous de bien avoir DOCKER et DOCKER compose installer sur votre machine
-
-LANCER LE PROJET :
-
-LISTE DES ENPOINTS :
-
-INTERFACE UTILISATEUR:
-=======
-
 ## Prérequis pour exécuter le projet
 - [Docker](https://www.docker.com/) installé sur votre machine.
 - [Docker Compose](https://docs.docker.com/compose/) installé.
@@ -37,7 +26,6 @@ docker-compose up
 # Frontend : Disponible à l’adresse http://localhost:8080
 # Backend API : Disponible à l’adresse http://localhost:3000
 
-
 ## Liste des endpoints de l’API
 
 # Jeux :
@@ -47,12 +35,8 @@ docker-compose up
 # PUT /api/games/:id : Modifie un jeu
 # DELETE /api/games/:id : Supprime un jeu à partir de son ID
 
-
 ## Fonctionnalités de l’interface utilisateur
 - Affichage de la liste des jeux.
 - Ajout d’un nouveau jeu via un formulaire.
 - Modification des jeux existants.
 - Suppression d’un jeu à partir de la liste.
-
-
->>>>>>> f225d48 (docker-compose)
