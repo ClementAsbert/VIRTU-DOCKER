@@ -1,19 +1,19 @@
 services:
   backend:
     build:
-      context: ./app-gestion
+      context: ./backend  
     ports:
       - "3000:3000"
     volumes:
-      - ./app-gestion:/usr/src/app
+      - ./backend:/usr/src/app  
       - /usr/src/app/node_modules  
     command: npm start
 
   frontend:
     build:
-      context: ./projet-virtu
+      context: ./frontend
     ports:
       - "8080:80"
     volumes:
       - /usr/src/app/node_modules
-    command: serve -s dist -l 80  
+    command: ["serve", "-s", "dist", "-l", "80"]
